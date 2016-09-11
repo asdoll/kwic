@@ -29,9 +29,9 @@ public class fullTest {
 		wordsToIgnore.addWordToIgnore("as");
 		wordsToIgnore.addWordToIgnore("a");
 		wordsToIgnore.addWordToIgnore("after");
-	//	RequiredWords requiredwords = RequiredWords.getRequiredWords();
-    //    requiredwords.addRequiredWords("Star");
-    //    requiredwords.addRequiredWords("Space");
+		RequiredWords requiredwords = RequiredWords.getRequiredWords();
+        requiredwords.addRequiredWords("Star");
+        requiredwords.addRequiredWords("Space");
 		Alphabetizer alphabetizer = new Alphabetizer();
         for (String str : inputs) {
             CircularShift shifter = new CircularShift(str);

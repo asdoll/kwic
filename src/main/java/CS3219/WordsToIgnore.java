@@ -22,16 +22,16 @@ public class WordsToIgnore {
 
     public void addWordToIgnore(String word) {
         assert(word != null);
-        this._wordsToIgnore.add(word);
+        this._wordsToIgnore.add(word.toLowerCase());
     }
 
     public void removeWordToIgnore(String word) {
         assert(word != null);
-        this._wordsToIgnore.remove(word);
+        this._wordsToIgnore.remove(word.toLowerCase());
     }
 
     public boolean isWordIgnored(String word) {
         assert(word != null);
-        return this._wordsToIgnore.contains(word);
+        return this._wordsToIgnore.contains(word.toLowerCase());
     }
 }

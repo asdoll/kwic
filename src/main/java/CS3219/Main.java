@@ -1,10 +1,12 @@
 package CS3219;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 /**
  * Created by junchao on 8/23/2014.
+ * Modified by wangminchen on 9/9/2016.
  */
 public class Main {
 
@@ -13,7 +15,7 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         System.out.println("Enter movie titles (terminate input by entering empty line) ");
-
+        
         List<String> inputs = new ArrayList<String>();
         String userInput = sc.nextLine();
         while (!userInput.isEmpty()) {
@@ -27,6 +29,18 @@ public class Main {
         while (!inputWordToIgnore.isEmpty()) {
             wordsToIgnore.addWordToIgnore(inputWordToIgnore);
             inputWordToIgnore = sc.nextLine();
+        }
+
+        System.out.println("Enter required words (terminate input by entering empty line) ");
+        String inputRequiredWords = sc.nextLine();
+        RequiredWords requiredwords = RequiredWords.getRequiredWords();
+        while (!inputRequiredWords.isEmpty()) {
+        	if(wordsToIgnore.isWordIgnored(inputRequiredWords)){
+        		System.out.println("\""+inputRequiredWords+"\" conflicts with ignore words! Exit!");
+        		System.exit(0);
+        	}
+        	requiredwords.addRequiredWords(inputRequiredWords);
+        	inputRequiredWords = sc.nextLine();
         }
 
         Alphabetizer alphabetizer = new Alphabetizer();
