@@ -1,6 +1,6 @@
 package test;
 
-import CS3213.Alphabetizer;
+import CS3219.Alphabetizer;
 import org.junit.Test;
 
 import static org.junit.Assert.*;

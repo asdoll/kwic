@@ -1,6 +1,6 @@
 package test;
 
-import CS3213.WordsToIgnore;
+import CS3219.WordsToIgnore;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
